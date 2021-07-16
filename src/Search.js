@@ -8,7 +8,7 @@ function Search() {
   let [response, setResponse] = useState({});
 
   function getWeatherData(response) {
-    console.log(response.data.coord.lon,response.data.coord.lat );
+   
     setResponse({
       name: response.data.name,
       temperature: Math.round(response.data.main.temp),

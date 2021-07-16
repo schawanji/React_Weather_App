@@ -5,6 +5,7 @@ import { useState } from "react";
 
 function WeatherForecast(props) {
   let [response, setResponse] = useState([12, 13, 35, 78, 30, 3]);
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   function getWeatherData(response) {
     //setResponse(response.data.daily)
     //console.log(response.data.daily);
@@ -21,7 +22,7 @@ function WeatherForecast(props) {
         return (
           <div className="col-sm-2">
             <div className="weatherforecast">
-              <div className="forecast-day"> Sat</div>
+              <div className="forecast-day"> {days[index]}</div>
               <div className="forecast-icon">
                 <ReactAnimatedWeather
                   icon={"CLEAR_DAY"}

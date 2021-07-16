@@ -1,12 +1,15 @@
 import ReactAnimatedWeather from "react-animated-weather";
+import Dates from "./Dates";
 
 function CurrentWeather(props) {
+  
   return (
     <div className="CurrentWeather">
       <div className="row">
         <div className="col-12 weather-summary">
           <h1> {props.response.name}</h1>
-          <div className="weather-summary-text"> Friday 14:15</div>
+          <Dates />
+
           <div className="weather-summary-text">
             {" "}
             {props.response.description}
