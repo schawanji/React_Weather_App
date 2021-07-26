@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import CurrentWeather from "./CurrentWeather";
-import WeatherForecast from "./WeatherForecast";
+
 import axios from "axios";
-import ReactAnimatedWeather from "react-animated-weather";
-import Dates from "./Dates";
+
 import "./Search.css";
 
 function Search() {
@@ -61,7 +60,7 @@ function Search() {
 
         <div className="CurrentWeather">
           <CurrentWeather weather={weather} />
-          <WeatherForecast weather={weather} />
+          
         </div>
       </div>
     );
