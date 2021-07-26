@@ -2,17 +2,16 @@ import ReactAnimatedWeather from "react-animated-weather";
 import Dates from "./Dates";
 
 function CurrentWeather(props) {
-  
   return (
     <div className="CurrentWeather">
       <div className="row">
         <div className="col-12 weather-summary">
-          <h1> {props.response.name}</h1>
+          <h1> {props.weather.name}</h1>
           <Dates />
 
           <div className="weather-summary-text">
             {" "}
-            {props.response.description}
+            {props.weather.description}
           </div>
         </div>
 
@@ -26,14 +25,14 @@ function CurrentWeather(props) {
                 animate={true}
               />
             </div>
-            <div className="weather-temp">{props.response.temperature}</div>{" "}
+            <div className="weather-temp">{props.weather.temperature}</div>{" "}
             <div className="weather-temp-units">°C</div>
           </div>
         </div>
         <div className="col-6">
           <ul>
-            <li>Humidity: {props.response.humidity} %</li>
-            <li>Wind Speed: {props.response.wind} km/h</li>
+            <li>Humidity: {props.weather.humidity} %</li>
+            <li>Wind Speed: {props.weather.wind} km/h</li>
           </ul>
         </div>
       </div>

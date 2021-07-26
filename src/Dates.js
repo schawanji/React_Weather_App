@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function Dates() {
   let timestamp = new Date();
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];

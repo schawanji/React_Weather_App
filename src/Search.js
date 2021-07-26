@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import CurrentWeather from "./CurrentWeather";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
+import ReactAnimatedWeather from "react-animated-weather";
+import Dates from "./Dates";
+import "./Search.css";
 
 function Search() {
-  let [city, setCity] = useState("");
-  let [response, setResponse] = useState({});
+  let [city, setCity] = useState();
+  let [response, setResponse] = useState(false);
+  let [weather, setWeatherData] = useState({});
 
   function getWeatherData(response) {
-   
-    setResponse({
+    setResponse(true);
+    setWeatherData({
       name: response.data.name,
       temperature: Math.round(response.data.main.temp),
       humidity: response.data.main.humidity,
@@ -33,26 +37,35 @@ function Search() {
   }
 
   let form = (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="search"
-        placeholder="Enter city name"
-        onChange={updateCity}
-      />
-      <button>
-        <i className="fas fa-search"></i>
-      </button>
-    </form>
-  );
-  return (
-    <div className="Search">
-      <div className="container">
-        {form}
-        <CurrentWeather response={response} />
-        <WeatherForecast response={response} />
-      </div>
+    <div className="container">
+      <header>Weather Search</header>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="search"
+          placeholder="Enter city name"
+          onChange={updateCity}
+        />
+        <button>
+          <i className="fas fa-search"></i>
+        </button>
+      </form>
     </div>
   );
+
+  if (response === false) {
+    return <div className="Search">{form}</div>;
+  } else {
+    return (
+      <div className="Search">
+        {form}
+
+        <div className="CurrentWeather">
+          <CurrentWeather weather={weather} />
+          <WeatherForecast weather={weather} />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Search;
