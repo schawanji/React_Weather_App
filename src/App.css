@@ -5,6 +5,7 @@
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
   max-width: 630px;
 }
+.container{ max-width: 630px;}
 .weather-summary {
   padding: 30px 10px;
   font-size: 16px;
