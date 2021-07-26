@@ -22,7 +22,7 @@ function WeatherForecast(props) {
   return (
     <div className="row">
       {days.map(function (day, index) {
-        
+    
         return (
           <div className="col-sm-2" key={index}>
             <div className="weatherforecast">
