@@ -1,6 +1,6 @@
 import "./CurrentWeather.css";
 import Date from "./Date";
-
+import WeatherIcon from "./WeatherIcon";
 export default function CurrentWeather(props) {
   return (
     <div className="CurrentWeather">
@@ -19,10 +19,7 @@ export default function CurrentWeather(props) {
         <div className="col-6">
           <div className="weather-temp">
             {" "}
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
-              alt=""
-            />
+            <WeatherIcon icon={props.weather.icon} />
             {props.weather.temp}
             <span className="weather-temp-unit">°C</span>{" "}
           </div>
