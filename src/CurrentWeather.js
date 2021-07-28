@@ -1,22 +1,17 @@
 import "./CurrentWeather.css";
-import Date from "./Date"
+import Date from "./Date";
 
 export default function CurrentWeather(props) {
-  
- 
   return (
-    <div className="App">
+    <div className="CurrentWeather">
       <div className="row">
         <div className="col-12">
-          <form>
-            <input type="search" />
-            <input type="submit" />
-          </form>
-
           <div className="">
             <ul>
               <li className="city">{props.weather.name}</li>
-              <li><Date date={props.weather.date}/></li>
+              <li>
+                <Date date={props.weather.date} />
+              </li>
               <li className="description">{props.weather.description}</li>
             </ul>
           </div>
@@ -29,7 +24,7 @@ export default function CurrentWeather(props) {
               alt=""
             />
             {props.weather.temp}
-            <span className="weather-temp-units">°C</span>{" "}
+            <span className="weather-temp-unit">°C</span>{" "}
           </div>
         </div>
         <div className="col-6">
