@@ -1,42 +1,44 @@
-import ReactAnimatedWeather from "react-animated-weather";
-import Dates from "./Dates";
+import "./CurrentWeather.css";
+import Date from "./Date"
 
-function CurrentWeather(props) {
+export default function CurrentWeather(props) {
+  
+ 
   return (
-    <div className="CurrentWeather">
+    <div className="App">
       <div className="row">
-        <div className="col-12 weather-summary">
-          <h1> {props.weather.name}</h1>
-          <Dates />
+        <div className="col-12">
+          <form>
+            <input type="search" />
+            <input type="submit" />
+          </form>
 
-          <div className="weather-summary-text">
-            {" "}
-            {props.weather.description}
+          <div className="">
+            <ul>
+              <li className="city">{props.weather.name}</li>
+              <li><Date date={props.weather.date}/></li>
+              <li className="description">{props.weather.description}</li>
+            </ul>
           </div>
         </div>
-
-        <div className="col-6 ">
-          <div className="clearfix">
-            <div className="float-left weather-icon">
-              <ReactAnimatedWeather
-                icon={"CLEAR_DAY"}
-                color={""}
-                size={38}
-                animate={true}
-              />
-            </div>
-            <div className="weather-temp">{props.weather.temperature}</div>{" "}
-            <div className="weather-temp-units">°C</div>
+        <div className="col-6">
+          <div className="weather-temp">
+            {" "}
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+              alt=""
+            />
+            {props.weather.temp}
+            <span className="weather-temp-units">°C</span>{" "}
           </div>
         </div>
         <div className="col-6">
           <ul>
-            <li>Humidity: {props.weather.humidity} %</li>
-            <li>Wind Speed: {props.weather.wind} km/h</li>
+            <li>Humidity : {props.weather.humidity}%</li>
+            <li>Wind: {props.weather.wind} km/h</li>
           </ul>
         </div>
       </div>
     </div>
   );
 }
-export default CurrentWeather;
