@@ -1,10 +1,15 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import WeatherIcon from "./WeatherIcon";
+import  "./WeatherForecast.css"
 
 export default function WeatherForecast(props) {
   const [response, setResponse] = useState(false);
   const [forecast, setForecast] = useState(null);
+
+  useEffect(() => {
+    setResponse(false);
+  }, [props]);
 
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -15,7 +20,7 @@ export default function WeatherForecast(props) {
 
   if (response) {
     return (
-      <div className="row">
+      <div className="row forecast">
         {days.map(function (day, index) {
           if (index < 6) {
             return (
