@@ -1,5 +1,5 @@
 import "./CurrentWeather.css";
-import Date from "./Date";
+import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 export default function CurrentWeather(props) {
   return (
@@ -10,7 +10,7 @@ export default function CurrentWeather(props) {
             <ul>
               <li className="city">{props.weather.name}</li>
               <li>
-                <Date date={props.weather.date} />
+                <FormattedDate timestamp={props.weather.date} />
               </li>
               <li className="description">{props.weather.description}</li>
             </ul>
