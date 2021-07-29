@@ -5,8 +5,8 @@ import CurrentWeather from "./CurrentWeather";
 
 function App() {
   let [city, setCity] = useState("Bern");
-  const [response, setResponse] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  let [response, setResponse] = useState(false);
+  let [weatherData, setWeatherData] = useState({});
 
   function getWeatherData(response) {
     
