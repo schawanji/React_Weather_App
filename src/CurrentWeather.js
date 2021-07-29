@@ -20,7 +20,7 @@ export default function CurrentWeather(props) {
         <div className="col-6">
           <div className="weather-temp">
             {" "}
-            <WeatherIcon icon={props.weather.icon} />
+            <WeatherIcon icon={props.weather.icon} size={64}/>
             {props.weather.temp}
             <span className="weather-temp-unit">°C</span>{" "}
           </div>

@@ -1,32 +1,42 @@
 .weather-summary {
-    padding: 30px 10px;
-    font-size: 16px;
-    line-height: 20px;
-  }
-  .weather-summary-text {
-    color: #878787;
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 20px;
-  }
+  padding: 30px 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
+.weather-summary-text {
+  color: #878787;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 20px;
+}
+
+.weather-temp {
+  color: #333;
+  float: left;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  padding-left: 10px;
+}
+.weather-temp-unit {
+  color: #333;
+  float: right;
+  font-size: 24px;
+  line-height: 1;
   
-  .weather-temp {
-    color: #333;
-    float: left;
-    font-size: 64px;
-    font-weight: 400;
-    line-height: 1;
-    padding-left: 10px;
-  }
-  .weather-temp-unit {
-    color: #333;
-    float: right;
-    font-size: 24px;
-    line-height: 1;
-  }
+}
 
-  .description{ 
-      text-transform:capitalize;
-  }
+.description {
+  text-transform: capitalize;
+}
 
-  form{padding: 15px 15px;}
+.city {
+  font-size: 34px;
+  font-weight: 400;
+}
+form {
+  padding: 15px 15px;
+}
+canvas {
+  line-height: 1;
+}
