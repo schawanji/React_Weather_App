@@ -9,7 +9,6 @@ function App() {
   let [weatherData, setWeatherData] = useState({});
 
   function getWeatherData(response) {
-    
     setWeatherData({
       temp: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed),
@@ -60,7 +59,11 @@ function App() {
         <small>
           {" "}
           <a href="https://schawanji.github.io/">Open source project</a> by
-          <a href="https://github.com/schawanji"> Sharon Chawanji</a>{" "}
+          <a href="https://github.com/schawanji"> Sharon Chawanji</a>
+          <a href="https://schawanji-react-weather-app.netlify.app/">
+            {" "}
+            hosted on Netlify.
+          </a>{" "}
         </small>
       </div>
     );
