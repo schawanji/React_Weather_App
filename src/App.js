@@ -9,7 +9,7 @@ function App() {
   const [weatherData, setWeatherData] = useState({});
 
   function getWeatherData(response) {
-    setResponse(true);
+    
     setWeatherData({
       temp: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed),
@@ -21,6 +21,7 @@ function App() {
       lon: response.data.coord.lon,
       lat: response.data.coord.lat,
     });
+    setResponse(true);
   }
 
   function search() {

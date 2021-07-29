@@ -1,6 +1,7 @@
 import "./CurrentWeather.css";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import WeatherForecast from "./WeatherForecast";
 export default function CurrentWeather(props) {
   return (
     <div className="CurrentWeather">
@@ -31,6 +32,7 @@ export default function CurrentWeather(props) {
           </ul>
         </div>
       </div>
+      <WeatherForecast lat={props.weather.lat} lon={props.weather.lon} />
     </div>
   );
 }
