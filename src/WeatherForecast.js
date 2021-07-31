@@ -14,6 +14,7 @@ export default function WeatherForecast(props) {
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   function displayWeatherForecast(response) {
+    console.log(response)
     setForecast(response.data.daily);
     setResponse(true);
   }

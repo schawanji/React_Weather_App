@@ -10,10 +10,10 @@ export default function CurrentWeather(props) {
           <div className="">
             <ul>
               <li className="city">{props.weather.name}</li>
-              <li>
+              <li className="weather-summary-text">
                 <FormattedDate timestamp={props.weather.date} />
               </li>
-              <li className="description">{props.weather.description}</li>
+              <li className="weather-summary-text">{props.weather.description}</li>
             </ul>
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function CurrentWeather(props) {
           </div>
         </div>
         <div className="col-6">
-          <ul>
+          <ul className="weather-summary-text">
             <li>Humidity : {props.weather.humidity}%</li>
             <li>Wind: {props.weather.wind} km/h</li>
           </ul>

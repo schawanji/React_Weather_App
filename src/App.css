@@ -1,5 +1,17 @@
 .App {
   border-radius: 5px;
-  border: solid 1px gray ;
-  margin: 0 auto ;
+  border: solid 1px gray;
+  font-family: "Zilla Slab", serif;
+  max-width: 650px;
+  margin: 0 auto;
+  background: rgb(177, 177, 214);
+}
+
+.weather-app {
+  padding: 15px 15px;
+}
+.search {
+  border-radius: 15px;
+  padding: 5px 5px;
+  outline: none;
 }

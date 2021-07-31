@@ -1,3 +1,7 @@
 .forecast {
   padding: 15px 15px;
+  font-size: 24px;
+}
+.min-temp {
+  color: gray;
 }

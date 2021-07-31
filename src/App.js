@@ -2,6 +2,7 @@ import "./App.css";
 import axios from "axios";
 import { useState } from "react";
 import CurrentWeather from "./CurrentWeather";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   let [city, setCity] = useState("Bern");
@@ -9,6 +10,7 @@ function App() {
   let [weatherData, setWeatherData] = useState({});
 
   function getWeatherData(response) {
+    console.log(response);
     setWeatherData({
       temp: Math.round(response.data.main.temp),
       wind: Math.round(response.data.wind.speed),
@@ -39,30 +41,33 @@ function App() {
 
   if (response) {
     return (
-      <div className="container">
+      <div className="weather-app">
         <div className="App">
-          <div className="row">
-            <div className="col-12">
-              <form onSubmit={handleSubmit}>
-                <input
-                  type="search"
-                  placeholder="Enter City Name"
-                  onChange={updateCity}
-                />
-                <input type="submit" value="Search" />
-              </form>
-              <CurrentWeather weather={weatherData} />
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <form onSubmit={handleSubmit}>
+                  <input
+                    type="search"
+                    placeholder="Enter City Name"
+                    onChange={updateCity}
+                    className="search"
+                  />
+
+                  <input type="submit" value="Search"className="search"/>
+                </form>
+                <CurrentWeather weather={weatherData} />
+              </div>
             </div>
           </div>
         </div>
-
         <small>
           {" "}
           <a href="https://schawanji.github.io/">Open source project</a> by
-          <a href="https://github.com/schawanji"> Sharon Chawanji</a>
+          <a href="https://github.com/schawanji"> Sharon Chawanji</a> hosted on
           <a href="https://schawanji-react-weather-app.netlify.app/">
             {" "}
-            hosted on Netlify.
+            Netlify.
           </a>{" "}
         </small>
       </div>
